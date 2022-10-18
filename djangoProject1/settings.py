@@ -76,12 +76,12 @@ WSGI_APPLICATION = 'djangoProject1.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'hrz_stage',
-        'USER': 'hrz_app',
-        'PASSWORD': 'xa4ieshauDoh',
-        'HOST': '10.0.41.250',
-        'PORT': '5438',
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": "cinematic",
+        "USER": "virtualniatelier",
+        "PASSWORD": "Cintiq24HD",
+        "HOST": "kinode.chlh2dhqmgv9.eu-west-1.rds.amazonaws.com",
+        "PORT": "3306",
     }
 }
 
