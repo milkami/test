@@ -11,7 +11,10 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
-
+import pymysql
+import os
+pymysql.version_info = (1, 4, 2, "final", 0)
+pymysql.install_as_MySQLdb()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -82,6 +85,15 @@ DATABASES = {
         "PASSWORD": "Cintiq24HD",
         "HOST": "kinode.chlh2dhqmgv9.eu-west-1.rds.amazonaws.com",
         "PORT": "3306",
+        "OPTIONS": {
+            "ssl": {
+                "ca": os.path.join(
+                    os.path.dirname(os.path.abspath("rds-ca-2019-root.pem")),
+                    "certificates",
+                    "rds-ca-2019-root.pem",
+                )
+            },
+        },
     }
 }
 
