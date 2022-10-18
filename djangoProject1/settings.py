@@ -79,21 +79,12 @@ WSGI_APPLICATION = 'djangoProject1.wsgi.application'
 
 DATABASES = {
     'default': {
-        "ENGINE": "django.db.backends.mysql",
-        "NAME": "cinematic",
-        "USER": "virtualniatelier",
-        "PASSWORD": "Cintiq24HD",
-        "HOST": "kinode.chlh2dhqmgv9.eu-west-1.rds.amazonaws.com",
-        "PORT": "3306",
-        "OPTIONS": {
-            "ssl": {
-                "ca": os.path.join(
-                    os.path.dirname(os.path.abspath("rds-ca-2019-root.pem")),
-                    "certificates",
-                    "rds-ca-2019-root.pem",
-                )
-            },
-        },
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': "smba_service",
+        'USER': "virtualniatelier",
+        'PASSWORD': 'Cintiq24HD',
+        'HOST': 'smba-service.chlh2dhqmgv9.eu-west-1.rds.amazonaws.com',
+        'PORT': 5432,
     }
 }
 
