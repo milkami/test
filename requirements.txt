@@ -2,3 +2,4 @@ django
 pymysql
 psycopg2-binary
 gunicorn
+whitenoise
