@@ -6,6 +6,6 @@ build:
       - pip install -r requirements.txt
       - python manage.py collectstatic --noinput
 run:
-  command: python manage.py runserver
+  command: python manage.py runserver --noreload
   network:
     port: 8000
