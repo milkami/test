@@ -29,6 +29,7 @@ SECRET_KEY = 'django-insecure-u3vvzh!#zqwbe559a!i%9^x18jg42n8^$t)31&x*w-e*7be+%r
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
+CSRF_TRUSTED_ORIGINS = ['https://*.smbapps.de', 'https://*.awsapprunner.com']
 
 
 # Application definition
