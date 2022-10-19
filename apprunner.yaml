@@ -1,0 +1,11 @@
+version: 1.0
+runtime: python3
+build:
+  commands:
+    build:
+      - pip install -r requirments.txt
+      - python manage.py collectstatic --noinput
+run:
+  command: python manage.py runserver
+  network:
+    port: 8000
