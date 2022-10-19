@@ -6,6 +6,6 @@ build:
       - pip install -r requirements.txt
       - python manage.py collectstatic --noinput
 run:
-  command: python manage.py runserver --noreload
+  command: gunicorn djangoProject1.wsgi
   network:
     port: 8000
